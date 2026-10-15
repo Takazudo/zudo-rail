@@ -52,6 +52,22 @@ describe("16 selections", () => {
       expect(parts.filter((x) => x.category === "bar")).toHaveLength(
         s.style === "NY" ? rows : 0,
       );
+      const nuts = parts.filter((p) => p.instances);
+      expect(nuts).toHaveLength(s.style === "NU" ? rows : 0);
+      for (const row of nuts) {
+        expect(row.instances).toHaveLength(s.width);
+        const points = row.instances!.map((m) =>
+          new Vector3().applyMatrix4(new Matrix4().fromArray(m)),
+        );
+        points
+          .slice(1)
+          .forEach((p, i) =>
+            expect(p.distanceTo(points[i])).toBeGreaterThan(4.4),
+          );
+        row.instances!.forEach((m) =>
+          expect(new Matrix4().fromArray(m).determinant()).toBeCloseTo(1),
+        );
+      }
       for (const p of parts)
         expect(new Matrix4().fromArray(p.matrix).determinant()).toBeCloseTo(1);
       const axes =

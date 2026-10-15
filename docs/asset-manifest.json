@@ -21,16 +21,8 @@
       "sha256": "a6cd696a68c0c0cdcef1c7d2e57c43fc4f8828389d37110c6b515576ee14bc7b",
       "triangles": 3376,
       "bbox": [
-        [
-          0.0,
-          0.0,
-          0.0
-        ],
-        [
-          152.331879,
-          5.503418,
-          4.5
-        ]
+        [0.0, 0.0, 0.0],
+        [152.331879, 5.503418, 4.5]
       ],
       "edgeIncidence": {
         "2": 5064
@@ -42,16 +34,8 @@
       "sha256": "622635ff84092a8b2ebfd8fb49c1e71656c4351f12cc6ef08ec68fcf7efb0a3b",
       "triangles": 4492,
       "bbox": [
-        [
-          0.0,
-          0.0,
-          0.0
-        ],
-        [
-          203.203278,
-          5.503433,
-          4.5
-        ]
+        [0.0, 0.0, 0.0],
+        [203.203278, 5.503433, 4.5]
       ],
       "edgeIncidence": {
         "2": 6738
@@ -63,16 +47,8 @@
       "sha256": "c9e91b4bd540e4236d29ba1369d2c866031079db13ba855d2956ed3f55d12639",
       "triangles": 5772,
       "bbox": [
-        [
-          0.0,
-          0.0,
-          0.0
-        ],
-        [
-          304.718048,
-          5.502998,
-          4.5
-        ]
+        [0.0, 0.0, 0.0],
+        [304.718048, 5.502998, 4.5]
       ],
       "edgeIncidence": {
         "2": 8658
@@ -84,16 +60,8 @@
       "sha256": "d5d30f918a8c4bb1ec81665aca90763a0fce1ec5d98e6168c872df373436afd1",
       "triangles": 1686,
       "bbox": [
-        [
-          0.0,
-          0.0,
-          0.0
-        ],
-        [
-          25.33876,
-          20.132004,
-          204.0
-        ]
+        [0.0, 0.0, 0.0],
+        [25.33876, 20.132004, 204.0]
       ],
       "edgeIncidence": {
         "2": 2529
@@ -105,16 +73,8 @@
       "sha256": "7a3c80939d1f347449ec8392fd186582b6f306f2e024d09b70dbac9607a1513f",
       "triangles": 1672,
       "bbox": [
-        [
-          0.0,
-          0.0,
-          0.0
-        ],
-        [
-          25.33876,
-          20.132004,
-          305.0
-        ]
+        [0.0, 0.0, 0.0],
+        [25.33876, 20.132004, 305.0]
       ],
       "edgeIncidence": {
         "2": 2508
@@ -126,16 +86,8 @@
       "sha256": "2c48edace51dec306e7ebf968edd0e9c86a1e44f8efb72a7ca5904db557e5dfd",
       "triangles": 320,
       "bbox": [
-        [
-          0.0,
-          0.0,
-          -3.199997
-        ],
-        [
-          20.131989,
-          14.886871,
-          207.199997
-        ]
+        [0.0, 0.0, -3.199997],
+        [20.131989, 14.886871, 207.199997]
       ],
       "edgeIncidence": {
         "2": 480
@@ -147,16 +99,8 @@
       "sha256": "ec4ab963eace2fbc61ef72f35ba678cc8c908c1a94b06cb85a33ebf745ae04c3",
       "triangles": 324,
       "bbox": [
-        [
-          0.0,
-          0.0,
-          -3.199997
-        ],
-        [
-          20.131989,
-          14.886871,
-          308.200012
-        ]
+        [0.0, 0.0, -3.199997],
+        [20.131989, 14.886871, 308.200012]
       ],
       "edgeIncidence": {
         "2": 486
@@ -168,16 +112,8 @@
       "sha256": "855568b8a573dc889d391c27249db6d24a28573c23277d29524546a8c455dba3",
       "triangles": 340,
       "bbox": [
-        [
-          0.0,
-          0.0,
-          0.0
-        ],
-        [
-          22.223892,
-          20.132,
-          204.0
-        ]
+        [0.0, 0.0, 0.0],
+        [22.223892, 20.132, 204.0]
       ],
       "edgeIncidence": {
         "2": 510
@@ -189,16 +125,8 @@
       "sha256": "89011bf6c566f7541e232e07368ad4bbbdf69d3f07f2cd9a90e5507ca947ee09",
       "triangles": 340,
       "bbox": [
-        [
-          0.0,
-          0.0,
-          0.0
-        ],
-        [
-          22.223892,
-          20.132,
-          305.0
-        ]
+        [0.0, 0.0, 0.0],
+        [22.223892, 20.132, 305.0]
       ],
       "edgeIncidence": {
         "2": 510
@@ -210,16 +138,8 @@
       "sha256": "fc8933e2bc746a1db79135308d31e1d085c4d6d61cd728cd29c73c171632de4e",
       "triangles": 244,
       "bbox": [
-        [
-          0.0,
-          9.225471,
-          -3.199997
-        ],
-        [
-          13.333389,
-          29.357002,
-          207.199997
-        ]
+        [0.0, 9.225471, -3.199997],
+        [13.333389, 29.357002, 207.199997]
       ],
       "edgeIncidence": {
         "2": 366
@@ -231,16 +151,8 @@
       "sha256": "c84d244165500acd8f555eb3f28aa4770443c40835b1ad11fad383633364e137",
       "triangles": 244,
       "bbox": [
-        [
-          0.0,
-          9.225479,
-          -3.199997
-        ],
-        [
-          13.333389,
-          29.35701,
-          308.200012
-        ]
+        [0.0, 9.225479, -3.199997],
+        [13.333389, 29.35701, 308.200012]
       ],
       "edgeIncidence": {
         "2": 366
@@ -277,11 +189,7 @@
     }
   },
   "coordinateContract": {
-    "worldAxes": [
-      "X: rail width",
-      "Y: row position",
-      "Z: module front"
-    ],
+    "worldAxes": ["X: rail width", "Y: row position", "Z: module front"],
     "coreLengthMm": {
       "40": 204,
       "60": 305
@@ -291,46 +199,19 @@
       "frame": 1.6
     },
     "sourceRecessAxesXYmm": {
-      "NU-single": [
-        [
-          14.9305648804,
-          6.7535858154
-        ]
-      ],
-      "NY-single": [
-        [
-          5.2001,
-          14.42556
-        ]
-      ],
+      "NU-single": [[14.9305648804, 6.7535858154]],
+      "NY-single": [[5.2001, 14.42556]],
       "NU-double": [
-        [
-          6.752716,
-          5.201429
-        ],
-        [
-          18.586121,
-          5.201429
-        ]
+        [6.752716, 5.201429],
+        [18.586121, 5.201429]
       ],
       "NY-double": [
-        [
-          5.197922,
-          5.201429
-        ],
-        [
-          17.022431,
-          5.201429
-        ]
+        [5.197922, 5.201429],
+        [17.022431, 5.201429]
       ]
     },
     "frame7uRailHoleUmm": [
-      6.0332935,
-      128.533836,
-      140.5298535,
-      263.030426,
-      275.0617065,
-      308.7211605
+      6.0332935, 128.533836, 140.5298535, 263.030426, 275.0617065, 308.7211605
     ]
   },
   "limitations": [
@@ -339,5 +220,22 @@
     "User P75 source differs from case 1U pad; both retained.",
     "Mesh edge closure does not prove self-intersection freedom, physical fit or manufacturing acceptance.",
     "No identity established with repaired Mac or JLC-uploaded bytes."
-  ]
+  ],
+  "displayApproximations": {
+    "nut": {
+      "sourceImage": "https://s.alicdn.com/@sc04/kf/Hd47923b017664456b1d36852aff671ddR.jpg_200x200.jpg",
+      "supplierDimensionsVerified": false,
+      "geometry": "src/visual-materials.ts#createNutGeometry",
+      "assumedEnvelopeMm": [10, 4.4, 3.6],
+      "assumedFrontWidthMm": 7.2,
+      "assumedHoleDiameterMm": 3,
+      "placement": "src/assembly.ts#addNuts",
+      "notes": "docs/visual-followup.md"
+    },
+    "panelFinish": {
+      "evidence": "docs/visual-followup.md",
+      "frame": "outside black / inside silver / cut edges silver",
+      "pad": "inside black / hidden backside silver (assumed) / cut edges silver"
+    }
+  }
 }

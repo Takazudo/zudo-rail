@@ -1,0 +1,343 @@
+{
+  "schemaVersion": 1,
+  "units": "mm; STL unitless, interpreted from source geometry without rescaling",
+  "sources": {
+    "rails": {
+      "repository": "https://github.com/Takazudo/zudo-rail",
+      "commit": "3244722d4ed0896dcebc5e31bb154209488f2705"
+    },
+    "panels": {
+      "repository": "https://github.com/Takazudo/zudo-blanks",
+      "commit": "23ce9df575d6f0ccadf42c02329601e7bb439682"
+    },
+    "assemblyReference": {
+      "repository": "https://github.com/Takazudo/zudo-case",
+      "commit": "12e66d724a0043e7304591b8dd94b4bb124894d0",
+      "path": "engineering/r6-body/build_geometry.py"
+    }
+  },
+  "meshes": {
+    "bar-30hp.stl": {
+      "sha256": "a6cd696a68c0c0cdcef1c7d2e57c43fc4f8828389d37110c6b515576ee14bc7b",
+      "triangles": 3376,
+      "bbox": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          152.331879,
+          5.503418,
+          4.5
+        ]
+      ],
+      "edgeIncidence": {
+        "2": 5064
+      },
+      "duplicateTriangles": 0,
+      "inconsistentDirectedEdgeCount": 0
+    },
+    "bar-40hp.stl": {
+      "sha256": "622635ff84092a8b2ebfd8fb49c1e71656c4351f12cc6ef08ec68fcf7efb0a3b",
+      "triangles": 4492,
+      "bbox": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          203.203278,
+          5.503433,
+          4.5
+        ]
+      ],
+      "edgeIncidence": {
+        "2": 6738
+      },
+      "duplicateTriangles": 0,
+      "inconsistentDirectedEdgeCount": 0
+    },
+    "bar-60hp.stl": {
+      "sha256": "c9e91b4bd540e4236d29ba1369d2c866031079db13ba855d2956ed3f55d12639",
+      "triangles": 5772,
+      "bbox": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          304.718048,
+          5.502998,
+          4.5
+        ]
+      ],
+      "edgeIncidence": {
+        "2": 8658
+      },
+      "duplicateTriangles": 0,
+      "inconsistentDirectedEdgeCount": 0
+    },
+    "nuts-double-v2-40hp.stl": {
+      "sha256": "d5d30f918a8c4bb1ec81665aca90763a0fce1ec5d98e6168c872df373436afd1",
+      "triangles": 1686,
+      "bbox": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          25.33876,
+          20.132004,
+          204.0
+        ]
+      ],
+      "edgeIncidence": {
+        "2": 2529
+      },
+      "duplicateTriangles": 0,
+      "inconsistentDirectedEdgeCount": 0
+    },
+    "nuts-double-v2-60hp.stl": {
+      "sha256": "7a3c80939d1f347449ec8392fd186582b6f306f2e024d09b70dbac9607a1513f",
+      "triangles": 1672,
+      "bbox": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          25.33876,
+          20.132004,
+          305.0
+        ]
+      ],
+      "edgeIncidence": {
+        "2": 2508
+      },
+      "duplicateTriangles": 0,
+      "inconsistentDirectedEdgeCount": 0
+    },
+    "nuts-single-v3-40hp.stl": {
+      "sha256": "2c48edace51dec306e7ebf968edd0e9c86a1e44f8efb72a7ca5904db557e5dfd",
+      "triangles": 320,
+      "bbox": [
+        [
+          0.0,
+          0.0,
+          -3.199997
+        ],
+        [
+          20.131989,
+          14.886871,
+          207.199997
+        ]
+      ],
+      "edgeIncidence": {
+        "2": 480
+      },
+      "duplicateTriangles": 0,
+      "inconsistentDirectedEdgeCount": 0
+    },
+    "nuts-single-v3-60hp.stl": {
+      "sha256": "ec4ab963eace2fbc61ef72f35ba678cc8c908c1a94b06cb85a33ebf745ae04c3",
+      "triangles": 324,
+      "bbox": [
+        [
+          0.0,
+          0.0,
+          -3.199997
+        ],
+        [
+          20.131989,
+          14.886871,
+          308.200012
+        ]
+      ],
+      "edgeIncidence": {
+        "2": 486
+      },
+      "duplicateTriangles": 0,
+      "inconsistentDirectedEdgeCount": 0
+    },
+    "nylon-double-v2-40hp.stl": {
+      "sha256": "855568b8a573dc889d391c27249db6d24a28573c23277d29524546a8c455dba3",
+      "triangles": 340,
+      "bbox": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          22.223892,
+          20.132,
+          204.0
+        ]
+      ],
+      "edgeIncidence": {
+        "2": 510
+      },
+      "duplicateTriangles": 0,
+      "inconsistentDirectedEdgeCount": 0
+    },
+    "nylon-double-v2-60hp.stl": {
+      "sha256": "89011bf6c566f7541e232e07368ad4bbbdf69d3f07f2cd9a90e5507ca947ee09",
+      "triangles": 340,
+      "bbox": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          22.223892,
+          20.132,
+          305.0
+        ]
+      ],
+      "edgeIncidence": {
+        "2": 510
+      },
+      "duplicateTriangles": 0,
+      "inconsistentDirectedEdgeCount": 0
+    },
+    "nylon-single-v3-40hp.stl": {
+      "sha256": "fc8933e2bc746a1db79135308d31e1d085c4d6d61cd728cd29c73c171632de4e",
+      "triangles": 244,
+      "bbox": [
+        [
+          0.0,
+          9.225471,
+          -3.199997
+        ],
+        [
+          13.333389,
+          29.357002,
+          207.199997
+        ]
+      ],
+      "edgeIncidence": {
+        "2": 366
+      },
+      "duplicateTriangles": 0,
+      "inconsistentDirectedEdgeCount": 0
+    },
+    "nylon-single-v3-60hp.stl": {
+      "sha256": "c84d244165500acd8f555eb3f28aa4770443c40835b1ad11fad383633364e137",
+      "triangles": 244,
+      "bbox": [
+        [
+          0.0,
+          9.225479,
+          -3.199997
+        ],
+        [
+          13.333389,
+          29.35701,
+          308.200012
+        ]
+      ],
+      "edgeIncidence": {
+        "2": 366
+      },
+      "duplicateTriangles": 0,
+      "inconsistentDirectedEdgeCount": 0
+    }
+  },
+  "panels": {
+    "frame3u": {
+      "path": "panels/zb-side-frame-3u/zd-side-frame-3u.kicad_pcb",
+      "sha256": "00174d7975b0565e0732544de5fdf3ada8b8d3a4a95d720819f104e384f5d2a7",
+      "thickness": 1.6
+    },
+    "frame7u": {
+      "path": "panels/zb-side-frame-7u/zd-side-frame-7u.kicad_pcb",
+      "sha256": "a99916e41e412404171cb16a24a252bb543eb56025ffe603ee3f1455a025ee86",
+      "thickness": 1.6
+    },
+    "pad3u": {
+      "path": "panels/zb-side-frame-pad-3u/3u-padder.kicad_pcb",
+      "sha256": "e7ea7daa33d98180f9f118e42b38d74d56d9a7ea685756a70123c9ffbf300b66",
+      "thickness": 1.6
+    },
+    "userPad1u": {
+      "path": "panels/zb-side-frame-1u/zb-side-frame-1u.kicad_pcb",
+      "sha256": "bc86dfdd5494d3d117f800197474874d09ea99d89e183390a0b650c5e995f8c0",
+      "thickness": 1.6
+    },
+    "casePad1u": {
+      "path": "panels/zb-side-frame-pad-1u/1u-padder.kicad_pcb",
+      "sha256": "dbd1d41152bbaf7350b7f1d83fa88c492acfb3ee164c5f187f5b6c7862b3769e",
+      "thickness": 1.6
+    }
+  },
+  "coordinateContract": {
+    "worldAxes": [
+      "X: rail width",
+      "Y: row position",
+      "Z: module front"
+    ],
+    "coreLengthMm": {
+      "40": 204,
+      "60": 305
+    },
+    "boardLayersMm": {
+      "pad": 1.6,
+      "frame": 1.6
+    },
+    "sourceRecessAxesXYmm": {
+      "NU-single": [
+        [
+          14.9305648804,
+          6.7535858154
+        ]
+      ],
+      "NY-single": [
+        [
+          5.2001,
+          14.42556
+        ]
+      ],
+      "NU-double": [
+        [
+          6.752716,
+          5.201429
+        ],
+        [
+          18.586121,
+          5.201429
+        ]
+      ],
+      "NY-double": [
+        [
+          5.197922,
+          5.201429
+        ],
+        [
+          17.022431,
+          5.201429
+        ]
+      ]
+    },
+    "frame7uRailHoleUmm": [
+      6.0332935,
+      128.533836,
+      140.5298535,
+      263.030426,
+      275.0617065,
+      308.7211605
+    ]
+  },
+  "limitations": [
+    "Recess centers inferred from opposed mesh flats; not native CAD mating datums.",
+    "7U side-frame BOM x1 not yet resolved as plate/set; source is one continuous plate and case uses two.",
+    "User P75 source differs from case 1U pad; both retained.",
+    "Mesh edge closure does not prove self-intersection freedom, physical fit or manufacturing acceptance.",
+    "No identity established with repaired Mac or JLC-uploaded bytes."
+  ]
+}

@@ -1,0 +1,5542 @@
+{
+  "units": "mm",
+  "matrixStorage": "column-major; local source -> X width / Y rows / Z front; rigid transform; rendered PCB thickness 1.6",
+  "variants": {
+    "RAIL-3U-NY-WH-40": {
+      "selection": {
+        "height": "3U",
+        "width": 40,
+        "style": "NY",
+        "color": "WH"
+      },
+      "bom": [
+        {
+          "name": "single レール本体",
+          "count": 2,
+          "material": "9000HE Resin / 白"
+        },
+        {
+          "name": "ナイロンバー",
+          "count": 2,
+          "material": "ナイロン（本体樹脂とは別）"
+        },
+        {
+          "name": "3U side frame",
+          "count": 2,
+          "material": "アルミPCB 1.6 mm / 左右各1枚"
+        },
+        {
+          "name": "3U pad",
+          "count": 2,
+          "material": "アルミPCB 1.6 mm"
+        }
+      ],
+      "status": "preview-unverified-fit",
+      "parts": [
+        {
+          "id": "single-0",
+          "category": "body",
+          "asset": "nylon-single-v3-40hp.stl",
+          "matrix": [
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            102,
+            -56.067831999999996,
+            -29.4558775,
+            1
+          ],
+          "explode": [
+            0,
+            -25,
+            0
+          ]
+        },
+        {
+          "id": "bar-single-0",
+          "category": "bar",
+          "asset": "bar-40hp.stl",
+          "matrix": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            101.601639,
+            -58.532442999999994,
+            -8.7397745,
+            1
+          ],
+          "explode": [
+            0,
+            -25,
+            32
+          ]
+        },
+        {
+          "id": "single-1",
+          "category": "body",
+          "asset": "nylon-single-v3-40hp.stl",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -102,
+            56.06780600000001,
+            -29.4558775,
+            1
+          ],
+          "explode": [
+            0,
+            25,
+            0
+          ]
+        },
+        {
+          "id": "bar-single-1",
+          "category": "bar",
+          "asset": "bar-40hp.stl",
+          "matrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -101.601639,
+            58.53241700000001,
+            -8.7397745,
+            1
+          ],
+          "explode": [
+            0,
+            25,
+            32
+          ]
+        },
+        {
+          "id": "frame3u--1-0",
+          "category": "panel",
+          "panel": "frame3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -103.6,
+            -67.26593,
+            0,
+            1
+          ],
+          "explode": [
+            -55,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u--1-1",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -102,
+            -67.26593,
+            0,
+            1
+          ],
+          "explode": [
+            -30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "frame3u-1-0",
+          "category": "panel",
+          "panel": "frame3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            105.19999999999999,
+            -67.26593,
+            0,
+            1
+          ],
+          "explode": [
+            55,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u-1-1",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            103.6,
+            -67.26593,
+            0,
+            1
+          ],
+          "explode": [
+            30,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    "RAIL-3U-NY-BK-40": {
+      "selection": {
+        "height": "3U",
+        "width": 40,
+        "style": "NY",
+        "color": "BK"
+      },
+      "bom": [
+        {
+          "name": "single レール本体",
+          "count": 2,
+          "material": "JLC Black Resin / 黒"
+        },
+        {
+          "name": "ナイロンバー",
+          "count": 2,
+          "material": "ナイロン（本体樹脂とは別）"
+        },
+        {
+          "name": "3U side frame",
+          "count": 2,
+          "material": "アルミPCB 1.6 mm / 左右各1枚"
+        },
+        {
+          "name": "3U pad",
+          "count": 2,
+          "material": "アルミPCB 1.6 mm"
+        }
+      ],
+      "status": "preview-unverified-fit",
+      "parts": [
+        {
+          "id": "single-0",
+          "category": "body",
+          "asset": "nylon-single-v3-40hp.stl",
+          "matrix": [
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            102,
+            -56.067831999999996,
+            -29.4558775,
+            1
+          ],
+          "explode": [
+            0,
+            -25,
+            0
+          ]
+        },
+        {
+          "id": "bar-single-0",
+          "category": "bar",
+          "asset": "bar-40hp.stl",
+          "matrix": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            101.601639,
+            -58.532442999999994,
+            -8.7397745,
+            1
+          ],
+          "explode": [
+            0,
+            -25,
+            32
+          ]
+        },
+        {
+          "id": "single-1",
+          "category": "body",
+          "asset": "nylon-single-v3-40hp.stl",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -102,
+            56.06780600000001,
+            -29.4558775,
+            1
+          ],
+          "explode": [
+            0,
+            25,
+            0
+          ]
+        },
+        {
+          "id": "bar-single-1",
+          "category": "bar",
+          "asset": "bar-40hp.stl",
+          "matrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -101.601639,
+            58.53241700000001,
+            -8.7397745,
+            1
+          ],
+          "explode": [
+            0,
+            25,
+            32
+          ]
+        },
+        {
+          "id": "frame3u--1-0",
+          "category": "panel",
+          "panel": "frame3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -103.6,
+            -67.26593,
+            0,
+            1
+          ],
+          "explode": [
+            -55,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u--1-1",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -102,
+            -67.26593,
+            0,
+            1
+          ],
+          "explode": [
+            -30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "frame3u-1-0",
+          "category": "panel",
+          "panel": "frame3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            105.19999999999999,
+            -67.26593,
+            0,
+            1
+          ],
+          "explode": [
+            55,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u-1-1",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            103.6,
+            -67.26593,
+            0,
+            1
+          ],
+          "explode": [
+            30,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    "RAIL-3U-NU-WH-40": {
+      "selection": {
+        "height": "3U",
+        "width": 40,
+        "style": "NU",
+        "color": "WH"
+      },
+      "bom": [
+        {
+          "name": "single レール本体",
+          "count": 2,
+          "material": "9000HE Resin / 白"
+        },
+        {
+          "name": "スライドナット",
+          "count": 80,
+          "material": "金属（単体形状未取得）"
+        },
+        {
+          "name": "3U side frame",
+          "count": 2,
+          "material": "アルミPCB 1.6 mm / 左右各1枚"
+        },
+        {
+          "name": "3U pad",
+          "count": 2,
+          "material": "アルミPCB 1.6 mm"
+        }
+      ],
+      "status": "preview-unverified-fit",
+      "parts": [
+        {
+          "id": "single-0",
+          "category": "body",
+          "asset": "nuts-single-v3-40hp.stl",
+          "matrix": [
+            0,
+            0,
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            102,
+            -54.51434618457031,
+            -0.09975261962890691,
+            1
+          ],
+          "explode": [
+            0,
+            -25,
+            0
+          ]
+        },
+        {
+          "id": "single-1",
+          "category": "body",
+          "asset": "nuts-single-v3-40hp.stl",
+          "matrix": [
+            0,
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -102,
+            54.51432018457032,
+            -0.09975261962890691,
+            1
+          ],
+          "explode": [
+            0,
+            25,
+            0
+          ]
+        },
+        {
+          "id": "frame3u--1-0",
+          "category": "panel",
+          "panel": "frame3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -103.6,
+            -67.26593,
+            0,
+            1
+          ],
+          "explode": [
+            -55,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u--1-1",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -102,
+            -67.26593,
+            0,
+            1
+          ],
+          "explode": [
+            -30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "frame3u-1-0",
+          "category": "panel",
+          "panel": "frame3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            105.19999999999999,
+            -67.26593,
+            0,
+            1
+          ],
+          "explode": [
+            55,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u-1-1",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            103.6,
+            -67.26593,
+            0,
+            1
+          ],
+          "explode": [
+            30,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    "RAIL-3U-NU-BK-40": {
+      "selection": {
+        "height": "3U",
+        "width": 40,
+        "style": "NU",
+        "color": "BK"
+      },
+      "bom": [
+        {
+          "name": "single レール本体",
+          "count": 2,
+          "material": "JLC Black Resin / 黒"
+        },
+        {
+          "name": "スライドナット",
+          "count": 80,
+          "material": "金属（単体形状未取得）"
+        },
+        {
+          "name": "3U side frame",
+          "count": 2,
+          "material": "アルミPCB 1.6 mm / 左右各1枚"
+        },
+        {
+          "name": "3U pad",
+          "count": 2,
+          "material": "アルミPCB 1.6 mm"
+        }
+      ],
+      "status": "preview-unverified-fit",
+      "parts": [
+        {
+          "id": "single-0",
+          "category": "body",
+          "asset": "nuts-single-v3-40hp.stl",
+          "matrix": [
+            0,
+            0,
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            102,
+            -54.51434618457031,
+            -0.09975261962890691,
+            1
+          ],
+          "explode": [
+            0,
+            -25,
+            0
+          ]
+        },
+        {
+          "id": "single-1",
+          "category": "body",
+          "asset": "nuts-single-v3-40hp.stl",
+          "matrix": [
+            0,
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -102,
+            54.51432018457032,
+            -0.09975261962890691,
+            1
+          ],
+          "explode": [
+            0,
+            25,
+            0
+          ]
+        },
+        {
+          "id": "frame3u--1-0",
+          "category": "panel",
+          "panel": "frame3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -103.6,
+            -67.26593,
+            0,
+            1
+          ],
+          "explode": [
+            -55,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u--1-1",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -102,
+            -67.26593,
+            0,
+            1
+          ],
+          "explode": [
+            -30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "frame3u-1-0",
+          "category": "panel",
+          "panel": "frame3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            105.19999999999999,
+            -67.26593,
+            0,
+            1
+          ],
+          "explode": [
+            55,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u-1-1",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            103.6,
+            -67.26593,
+            0,
+            1
+          ],
+          "explode": [
+            30,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    "RAIL-3U-NY-WH-60": {
+      "selection": {
+        "height": "3U",
+        "width": 60,
+        "style": "NY",
+        "color": "WH"
+      },
+      "bom": [
+        {
+          "name": "single レール本体",
+          "count": 2,
+          "material": "9000HE Resin / 白"
+        },
+        {
+          "name": "ナイロンバー",
+          "count": 2,
+          "material": "ナイロン（本体樹脂とは別）"
+        },
+        {
+          "name": "3U side frame",
+          "count": 2,
+          "material": "アルミPCB 1.6 mm / 左右各1枚"
+        },
+        {
+          "name": "3U pad",
+          "count": 2,
+          "material": "アルミPCB 1.6 mm"
+        }
+      ],
+      "status": "preview-unverified-fit",
+      "parts": [
+        {
+          "id": "single-0",
+          "category": "body",
+          "asset": "nylon-single-v3-60hp.stl",
+          "matrix": [
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            152.5,
+            -56.067831999999996,
+            -29.4558775,
+            1
+          ],
+          "explode": [
+            0,
+            -25,
+            0
+          ]
+        },
+        {
+          "id": "bar-single-0",
+          "category": "bar",
+          "asset": "bar-60hp.stl",
+          "matrix": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            152.359024,
+            -58.53266049999999,
+            -8.7397745,
+            1
+          ],
+          "explode": [
+            0,
+            -25,
+            32
+          ]
+        },
+        {
+          "id": "single-1",
+          "category": "body",
+          "asset": "nylon-single-v3-60hp.stl",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -152.5,
+            56.06780600000001,
+            -29.4558775,
+            1
+          ],
+          "explode": [
+            0,
+            25,
+            0
+          ]
+        },
+        {
+          "id": "bar-single-1",
+          "category": "bar",
+          "asset": "bar-60hp.stl",
+          "matrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -152.359024,
+            58.532634500000015,
+            -8.7397745,
+            1
+          ],
+          "explode": [
+            0,
+            25,
+            32
+          ]
+        },
+        {
+          "id": "frame3u--1-0",
+          "category": "panel",
+          "panel": "frame3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -154.1,
+            -67.26593,
+            0,
+            1
+          ],
+          "explode": [
+            -55,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u--1-1",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -152.5,
+            -67.26593,
+            0,
+            1
+          ],
+          "explode": [
+            -30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "frame3u-1-0",
+          "category": "panel",
+          "panel": "frame3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            155.7,
+            -67.26593,
+            0,
+            1
+          ],
+          "explode": [
+            55,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u-1-1",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            154.1,
+            -67.26593,
+            0,
+            1
+          ],
+          "explode": [
+            30,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    "RAIL-3U-NY-BK-60": {
+      "selection": {
+        "height": "3U",
+        "width": 60,
+        "style": "NY",
+        "color": "BK"
+      },
+      "bom": [
+        {
+          "name": "single レール本体",
+          "count": 2,
+          "material": "JLC Black Resin / 黒"
+        },
+        {
+          "name": "ナイロンバー",
+          "count": 2,
+          "material": "ナイロン（本体樹脂とは別）"
+        },
+        {
+          "name": "3U side frame",
+          "count": 2,
+          "material": "アルミPCB 1.6 mm / 左右各1枚"
+        },
+        {
+          "name": "3U pad",
+          "count": 2,
+          "material": "アルミPCB 1.6 mm"
+        }
+      ],
+      "status": "preview-unverified-fit",
+      "parts": [
+        {
+          "id": "single-0",
+          "category": "body",
+          "asset": "nylon-single-v3-60hp.stl",
+          "matrix": [
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            152.5,
+            -56.067831999999996,
+            -29.4558775,
+            1
+          ],
+          "explode": [
+            0,
+            -25,
+            0
+          ]
+        },
+        {
+          "id": "bar-single-0",
+          "category": "bar",
+          "asset": "bar-60hp.stl",
+          "matrix": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            152.359024,
+            -58.53266049999999,
+            -8.7397745,
+            1
+          ],
+          "explode": [
+            0,
+            -25,
+            32
+          ]
+        },
+        {
+          "id": "single-1",
+          "category": "body",
+          "asset": "nylon-single-v3-60hp.stl",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -152.5,
+            56.06780600000001,
+            -29.4558775,
+            1
+          ],
+          "explode": [
+            0,
+            25,
+            0
+          ]
+        },
+        {
+          "id": "bar-single-1",
+          "category": "bar",
+          "asset": "bar-60hp.stl",
+          "matrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -152.359024,
+            58.532634500000015,
+            -8.7397745,
+            1
+          ],
+          "explode": [
+            0,
+            25,
+            32
+          ]
+        },
+        {
+          "id": "frame3u--1-0",
+          "category": "panel",
+          "panel": "frame3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -154.1,
+            -67.26593,
+            0,
+            1
+          ],
+          "explode": [
+            -55,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u--1-1",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -152.5,
+            -67.26593,
+            0,
+            1
+          ],
+          "explode": [
+            -30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "frame3u-1-0",
+          "category": "panel",
+          "panel": "frame3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            155.7,
+            -67.26593,
+            0,
+            1
+          ],
+          "explode": [
+            55,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u-1-1",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            154.1,
+            -67.26593,
+            0,
+            1
+          ],
+          "explode": [
+            30,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    "RAIL-3U-NU-WH-60": {
+      "selection": {
+        "height": "3U",
+        "width": 60,
+        "style": "NU",
+        "color": "WH"
+      },
+      "bom": [
+        {
+          "name": "single レール本体",
+          "count": 2,
+          "material": "9000HE Resin / 白"
+        },
+        {
+          "name": "スライドナット",
+          "count": 120,
+          "material": "金属（単体形状未取得）"
+        },
+        {
+          "name": "3U side frame",
+          "count": 2,
+          "material": "アルミPCB 1.6 mm / 左右各1枚"
+        },
+        {
+          "name": "3U pad",
+          "count": 2,
+          "material": "アルミPCB 1.6 mm"
+        }
+      ],
+      "status": "preview-unverified-fit",
+      "parts": [
+        {
+          "id": "single-0",
+          "category": "body",
+          "asset": "nuts-single-v3-60hp.stl",
+          "matrix": [
+            0,
+            0,
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            152.5,
+            -54.51434618457031,
+            -0.09975261962890691,
+            1
+          ],
+          "explode": [
+            0,
+            -25,
+            0
+          ]
+        },
+        {
+          "id": "single-1",
+          "category": "body",
+          "asset": "nuts-single-v3-60hp.stl",
+          "matrix": [
+            0,
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -152.5,
+            54.51432018457032,
+            -0.09975261962890691,
+            1
+          ],
+          "explode": [
+            0,
+            25,
+            0
+          ]
+        },
+        {
+          "id": "frame3u--1-0",
+          "category": "panel",
+          "panel": "frame3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -154.1,
+            -67.26593,
+            0,
+            1
+          ],
+          "explode": [
+            -55,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u--1-1",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -152.5,
+            -67.26593,
+            0,
+            1
+          ],
+          "explode": [
+            -30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "frame3u-1-0",
+          "category": "panel",
+          "panel": "frame3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            155.7,
+            -67.26593,
+            0,
+            1
+          ],
+          "explode": [
+            55,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u-1-1",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            154.1,
+            -67.26593,
+            0,
+            1
+          ],
+          "explode": [
+            30,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    "RAIL-3U-NU-BK-60": {
+      "selection": {
+        "height": "3U",
+        "width": 60,
+        "style": "NU",
+        "color": "BK"
+      },
+      "bom": [
+        {
+          "name": "single レール本体",
+          "count": 2,
+          "material": "JLC Black Resin / 黒"
+        },
+        {
+          "name": "スライドナット",
+          "count": 120,
+          "material": "金属（単体形状未取得）"
+        },
+        {
+          "name": "3U side frame",
+          "count": 2,
+          "material": "アルミPCB 1.6 mm / 左右各1枚"
+        },
+        {
+          "name": "3U pad",
+          "count": 2,
+          "material": "アルミPCB 1.6 mm"
+        }
+      ],
+      "status": "preview-unverified-fit",
+      "parts": [
+        {
+          "id": "single-0",
+          "category": "body",
+          "asset": "nuts-single-v3-60hp.stl",
+          "matrix": [
+            0,
+            0,
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            152.5,
+            -54.51434618457031,
+            -0.09975261962890691,
+            1
+          ],
+          "explode": [
+            0,
+            -25,
+            0
+          ]
+        },
+        {
+          "id": "single-1",
+          "category": "body",
+          "asset": "nuts-single-v3-60hp.stl",
+          "matrix": [
+            0,
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -152.5,
+            54.51432018457032,
+            -0.09975261962890691,
+            1
+          ],
+          "explode": [
+            0,
+            25,
+            0
+          ]
+        },
+        {
+          "id": "frame3u--1-0",
+          "category": "panel",
+          "panel": "frame3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -154.1,
+            -67.26593,
+            0,
+            1
+          ],
+          "explode": [
+            -55,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u--1-1",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -152.5,
+            -67.26593,
+            0,
+            1
+          ],
+          "explode": [
+            -30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "frame3u-1-0",
+          "category": "panel",
+          "panel": "frame3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            155.7,
+            -67.26593,
+            0,
+            1
+          ],
+          "explode": [
+            55,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u-1-1",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            154.1,
+            -67.26593,
+            0,
+            1
+          ],
+          "explode": [
+            30,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    "RAIL-7U-NY-WH-40": {
+      "selection": {
+        "height": "7U",
+        "width": 40,
+        "style": "NY",
+        "color": "WH"
+      },
+      "bom": [
+        {
+          "name": "single レール本体",
+          "count": 2,
+          "material": "9000HE Resin / 白"
+        },
+        {
+          "name": "double レール本体",
+          "count": 2,
+          "material": "9000HE Resin / 白"
+        },
+        {
+          "name": "ナイロンバー",
+          "count": 6,
+          "material": "ナイロン（本体樹脂とは別）"
+        },
+        {
+          "name": "7U side frame",
+          "count": 2,
+          "material": "アルミPCB 1.6 mm / 左右各1枚"
+        },
+        {
+          "name": "3U pad",
+          "count": 4,
+          "material": "アルミPCB 1.6 mm"
+        },
+        {
+          "name": "1U pad",
+          "count": 2,
+          "material": "アルミPCB 1.6 mm / 中央開口付き"
+        }
+      ],
+      "status": "preview-unverified-fit",
+      "parts": [
+        {
+          "id": "single-0",
+          "category": "body",
+          "asset": "nylon-single-v3-40hp.stl",
+          "matrix": [
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            102,
+            -146.1438345,
+            -29.4205805,
+            1
+          ],
+          "explode": [
+            0,
+            -25,
+            0
+          ]
+        },
+        {
+          "id": "bar-single-0",
+          "category": "bar",
+          "asset": "bar-40hp.stl",
+          "matrix": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            101.601639,
+            -148.6084455,
+            -8.7044775,
+            1
+          ],
+          "explode": [
+            0,
+            -25,
+            32
+          ]
+        },
+        {
+          "id": "single-1",
+          "category": "body",
+          "asset": "nylon-single-v3-40hp.stl",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -102,
+            146.1438325,
+            -29.4205805,
+            1
+          ],
+          "explode": [
+            0,
+            25,
+            0
+          ]
+        },
+        {
+          "id": "bar-single-1",
+          "category": "bar",
+          "asset": "bar-40hp.stl",
+          "matrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -101.601639,
+            148.6084435,
+            -8.7044775,
+            1
+          ],
+          "explode": [
+            0,
+            25,
+            32
+          ]
+        },
+        {
+          "id": "double-0",
+          "category": "body",
+          "asset": "nylon-double-v2-40hp.stl",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -102,
+            -33.95555975,
+            -20.1964495,
+            1
+          ],
+          "explode": [
+            0,
+            0,
+            -30
+          ]
+        },
+        {
+          "id": "bar-double-0-0",
+          "category": "bar",
+          "asset": "bar-40hp.stl",
+          "matrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -101.601639,
+            -31.48995275,
+            -8.7070695,
+            1
+          ],
+          "explode": [
+            0,
+            0,
+            32
+          ]
+        },
+        {
+          "id": "bar-double-0-1",
+          "category": "bar",
+          "asset": "bar-40hp.stl",
+          "matrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -101.601639,
+            -19.69895275,
+            -8.7070695,
+            1
+          ],
+          "explode": [
+            0,
+            0,
+            32
+          ]
+        },
+        {
+          "id": "double-1",
+          "category": "body",
+          "asset": "nylon-double-v2-40hp.stl",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -102,
+            100.55866174999997,
+            -20.1964495,
+            1
+          ],
+          "explode": [
+            0,
+            0,
+            -30
+          ]
+        },
+        {
+          "id": "bar-double-1-0",
+          "category": "bar",
+          "asset": "bar-40hp.stl",
+          "matrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -101.601639,
+            103.02426874999998,
+            -8.7070695,
+            1
+          ],
+          "explode": [
+            0,
+            0,
+            32
+          ]
+        },
+        {
+          "id": "bar-double-1-1",
+          "category": "bar",
+          "asset": "bar-40hp.stl",
+          "matrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -101.601639,
+            114.81526874999997,
+            -8.7070695,
+            1
+          ],
+          "explode": [
+            0,
+            0,
+            32
+          ]
+        },
+        {
+          "id": "frame7u--1-0",
+          "category": "panel",
+          "panel": "frame7u",
+          "matrix": [
+            0,
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -105.19999999999999,
+            -157.377228,
+            0,
+            1
+          ],
+          "explode": [
+            -55,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u--1-1",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -102,
+            -157.377228,
+            0,
+            1
+          ],
+          "explode": [
+            -30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u--1-2",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -102,
+            -22.845368000000008,
+            0,
+            1
+          ],
+          "explode": [
+            -30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "casePad1u--1-3",
+          "category": "panel",
+          "panel": "casePad1u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -102,
+            111.66179899999997,
+            0.025081,
+            1
+          ],
+          "explode": [
+            -30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "frame7u-1-0",
+          "category": "panel",
+          "panel": "frame7u",
+          "matrix": [
+            0,
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            103.6,
+            -157.377228,
+            0,
+            1
+          ],
+          "explode": [
+            55,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u-1-1",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            103.6,
+            -157.377228,
+            0,
+            1
+          ],
+          "explode": [
+            30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u-1-2",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            103.6,
+            -22.845368000000008,
+            0,
+            1
+          ],
+          "explode": [
+            30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "casePad1u-1-3",
+          "category": "panel",
+          "panel": "casePad1u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            103.6,
+            111.66179899999997,
+            0.025081,
+            1
+          ],
+          "explode": [
+            30,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    "RAIL-7U-NY-BK-40": {
+      "selection": {
+        "height": "7U",
+        "width": 40,
+        "style": "NY",
+        "color": "BK"
+      },
+      "bom": [
+        {
+          "name": "single レール本体",
+          "count": 2,
+          "material": "JLC Black Resin / 黒"
+        },
+        {
+          "name": "double レール本体",
+          "count": 2,
+          "material": "JLC Black Resin / 黒"
+        },
+        {
+          "name": "ナイロンバー",
+          "count": 6,
+          "material": "ナイロン（本体樹脂とは別）"
+        },
+        {
+          "name": "7U side frame",
+          "count": 2,
+          "material": "アルミPCB 1.6 mm / 左右各1枚"
+        },
+        {
+          "name": "3U pad",
+          "count": 4,
+          "material": "アルミPCB 1.6 mm"
+        },
+        {
+          "name": "1U pad",
+          "count": 2,
+          "material": "アルミPCB 1.6 mm / 中央開口付き"
+        }
+      ],
+      "status": "preview-unverified-fit",
+      "parts": [
+        {
+          "id": "single-0",
+          "category": "body",
+          "asset": "nylon-single-v3-40hp.stl",
+          "matrix": [
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            102,
+            -146.1438345,
+            -29.4205805,
+            1
+          ],
+          "explode": [
+            0,
+            -25,
+            0
+          ]
+        },
+        {
+          "id": "bar-single-0",
+          "category": "bar",
+          "asset": "bar-40hp.stl",
+          "matrix": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            101.601639,
+            -148.6084455,
+            -8.7044775,
+            1
+          ],
+          "explode": [
+            0,
+            -25,
+            32
+          ]
+        },
+        {
+          "id": "single-1",
+          "category": "body",
+          "asset": "nylon-single-v3-40hp.stl",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -102,
+            146.1438325,
+            -29.4205805,
+            1
+          ],
+          "explode": [
+            0,
+            25,
+            0
+          ]
+        },
+        {
+          "id": "bar-single-1",
+          "category": "bar",
+          "asset": "bar-40hp.stl",
+          "matrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -101.601639,
+            148.6084435,
+            -8.7044775,
+            1
+          ],
+          "explode": [
+            0,
+            25,
+            32
+          ]
+        },
+        {
+          "id": "double-0",
+          "category": "body",
+          "asset": "nylon-double-v2-40hp.stl",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -102,
+            -33.95555975,
+            -20.1964495,
+            1
+          ],
+          "explode": [
+            0,
+            0,
+            -30
+          ]
+        },
+        {
+          "id": "bar-double-0-0",
+          "category": "bar",
+          "asset": "bar-40hp.stl",
+          "matrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -101.601639,
+            -31.48995275,
+            -8.7070695,
+            1
+          ],
+          "explode": [
+            0,
+            0,
+            32
+          ]
+        },
+        {
+          "id": "bar-double-0-1",
+          "category": "bar",
+          "asset": "bar-40hp.stl",
+          "matrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -101.601639,
+            -19.69895275,
+            -8.7070695,
+            1
+          ],
+          "explode": [
+            0,
+            0,
+            32
+          ]
+        },
+        {
+          "id": "double-1",
+          "category": "body",
+          "asset": "nylon-double-v2-40hp.stl",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -102,
+            100.55866174999997,
+            -20.1964495,
+            1
+          ],
+          "explode": [
+            0,
+            0,
+            -30
+          ]
+        },
+        {
+          "id": "bar-double-1-0",
+          "category": "bar",
+          "asset": "bar-40hp.stl",
+          "matrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -101.601639,
+            103.02426874999998,
+            -8.7070695,
+            1
+          ],
+          "explode": [
+            0,
+            0,
+            32
+          ]
+        },
+        {
+          "id": "bar-double-1-1",
+          "category": "bar",
+          "asset": "bar-40hp.stl",
+          "matrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -101.601639,
+            114.81526874999997,
+            -8.7070695,
+            1
+          ],
+          "explode": [
+            0,
+            0,
+            32
+          ]
+        },
+        {
+          "id": "frame7u--1-0",
+          "category": "panel",
+          "panel": "frame7u",
+          "matrix": [
+            0,
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -105.19999999999999,
+            -157.377228,
+            0,
+            1
+          ],
+          "explode": [
+            -55,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u--1-1",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -102,
+            -157.377228,
+            0,
+            1
+          ],
+          "explode": [
+            -30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u--1-2",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -102,
+            -22.845368000000008,
+            0,
+            1
+          ],
+          "explode": [
+            -30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "casePad1u--1-3",
+          "category": "panel",
+          "panel": "casePad1u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -102,
+            111.66179899999997,
+            0.025081,
+            1
+          ],
+          "explode": [
+            -30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "frame7u-1-0",
+          "category": "panel",
+          "panel": "frame7u",
+          "matrix": [
+            0,
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            103.6,
+            -157.377228,
+            0,
+            1
+          ],
+          "explode": [
+            55,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u-1-1",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            103.6,
+            -157.377228,
+            0,
+            1
+          ],
+          "explode": [
+            30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u-1-2",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            103.6,
+            -22.845368000000008,
+            0,
+            1
+          ],
+          "explode": [
+            30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "casePad1u-1-3",
+          "category": "panel",
+          "panel": "casePad1u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            103.6,
+            111.66179899999997,
+            0.025081,
+            1
+          ],
+          "explode": [
+            30,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    "RAIL-7U-NU-WH-40": {
+      "selection": {
+        "height": "7U",
+        "width": 40,
+        "style": "NU",
+        "color": "WH"
+      },
+      "bom": [
+        {
+          "name": "single レール本体",
+          "count": 2,
+          "material": "9000HE Resin / 白"
+        },
+        {
+          "name": "double レール本体",
+          "count": 2,
+          "material": "9000HE Resin / 白"
+        },
+        {
+          "name": "スライドナット",
+          "count": 240,
+          "material": "金属（単体形状未取得）"
+        },
+        {
+          "name": "7U side frame",
+          "count": 2,
+          "material": "アルミPCB 1.6 mm / 左右各1枚"
+        },
+        {
+          "name": "3U pad",
+          "count": 4,
+          "material": "アルミPCB 1.6 mm"
+        },
+        {
+          "name": "1U pad",
+          "count": 2,
+          "material": "アルミPCB 1.6 mm / 中央開口付き"
+        }
+      ],
+      "status": "preview-unverified-fit",
+      "parts": [
+        {
+          "id": "single-0",
+          "category": "body",
+          "asset": "nuts-single-v3-40hp.stl",
+          "matrix": [
+            0,
+            0,
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            102,
+            -144.5903486845703,
+            -0.064455619628907,
+            1
+          ],
+          "explode": [
+            0,
+            -25,
+            0
+          ]
+        },
+        {
+          "id": "single-1",
+          "category": "body",
+          "asset": "nuts-single-v3-40hp.stl",
+          "matrix": [
+            0,
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -102,
+            144.5903466845703,
+            -0.064455619628907,
+            1
+          ],
+          "explode": [
+            0,
+            25,
+            0
+          ]
+        },
+        {
+          "id": "double-0",
+          "category": "body",
+          "asset": "nuts-double-v2-40hp.stl",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -102,
+            -35.51480175,
+            -20.1964495,
+            1
+          ],
+          "explode": [
+            0,
+            0,
+            -30
+          ]
+        },
+        {
+          "id": "double-1",
+          "category": "body",
+          "asset": "nuts-double-v2-40hp.stl",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -102,
+            98.99941974999996,
+            -20.1964495,
+            1
+          ],
+          "explode": [
+            0,
+            0,
+            -30
+          ]
+        },
+        {
+          "id": "frame7u--1-0",
+          "category": "panel",
+          "panel": "frame7u",
+          "matrix": [
+            0,
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -105.19999999999999,
+            -157.377228,
+            0,
+            1
+          ],
+          "explode": [
+            -55,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u--1-1",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -102,
+            -157.377228,
+            0,
+            1
+          ],
+          "explode": [
+            -30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u--1-2",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -102,
+            -22.845368000000008,
+            0,
+            1
+          ],
+          "explode": [
+            -30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "casePad1u--1-3",
+          "category": "panel",
+          "panel": "casePad1u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -102,
+            111.66179899999997,
+            0.025081,
+            1
+          ],
+          "explode": [
+            -30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "frame7u-1-0",
+          "category": "panel",
+          "panel": "frame7u",
+          "matrix": [
+            0,
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            103.6,
+            -157.377228,
+            0,
+            1
+          ],
+          "explode": [
+            55,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u-1-1",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            103.6,
+            -157.377228,
+            0,
+            1
+          ],
+          "explode": [
+            30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u-1-2",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            103.6,
+            -22.845368000000008,
+            0,
+            1
+          ],
+          "explode": [
+            30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "casePad1u-1-3",
+          "category": "panel",
+          "panel": "casePad1u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            103.6,
+            111.66179899999997,
+            0.025081,
+            1
+          ],
+          "explode": [
+            30,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    "RAIL-7U-NU-BK-40": {
+      "selection": {
+        "height": "7U",
+        "width": 40,
+        "style": "NU",
+        "color": "BK"
+      },
+      "bom": [
+        {
+          "name": "single レール本体",
+          "count": 2,
+          "material": "JLC Black Resin / 黒"
+        },
+        {
+          "name": "double レール本体",
+          "count": 2,
+          "material": "JLC Black Resin / 黒"
+        },
+        {
+          "name": "スライドナット",
+          "count": 240,
+          "material": "金属（単体形状未取得）"
+        },
+        {
+          "name": "7U side frame",
+          "count": 2,
+          "material": "アルミPCB 1.6 mm / 左右各1枚"
+        },
+        {
+          "name": "3U pad",
+          "count": 4,
+          "material": "アルミPCB 1.6 mm"
+        },
+        {
+          "name": "1U pad",
+          "count": 2,
+          "material": "アルミPCB 1.6 mm / 中央開口付き"
+        }
+      ],
+      "status": "preview-unverified-fit",
+      "parts": [
+        {
+          "id": "single-0",
+          "category": "body",
+          "asset": "nuts-single-v3-40hp.stl",
+          "matrix": [
+            0,
+            0,
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            102,
+            -144.5903486845703,
+            -0.064455619628907,
+            1
+          ],
+          "explode": [
+            0,
+            -25,
+            0
+          ]
+        },
+        {
+          "id": "single-1",
+          "category": "body",
+          "asset": "nuts-single-v3-40hp.stl",
+          "matrix": [
+            0,
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -102,
+            144.5903466845703,
+            -0.064455619628907,
+            1
+          ],
+          "explode": [
+            0,
+            25,
+            0
+          ]
+        },
+        {
+          "id": "double-0",
+          "category": "body",
+          "asset": "nuts-double-v2-40hp.stl",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -102,
+            -35.51480175,
+            -20.1964495,
+            1
+          ],
+          "explode": [
+            0,
+            0,
+            -30
+          ]
+        },
+        {
+          "id": "double-1",
+          "category": "body",
+          "asset": "nuts-double-v2-40hp.stl",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -102,
+            98.99941974999996,
+            -20.1964495,
+            1
+          ],
+          "explode": [
+            0,
+            0,
+            -30
+          ]
+        },
+        {
+          "id": "frame7u--1-0",
+          "category": "panel",
+          "panel": "frame7u",
+          "matrix": [
+            0,
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -105.19999999999999,
+            -157.377228,
+            0,
+            1
+          ],
+          "explode": [
+            -55,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u--1-1",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -102,
+            -157.377228,
+            0,
+            1
+          ],
+          "explode": [
+            -30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u--1-2",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -102,
+            -22.845368000000008,
+            0,
+            1
+          ],
+          "explode": [
+            -30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "casePad1u--1-3",
+          "category": "panel",
+          "panel": "casePad1u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -102,
+            111.66179899999997,
+            0.025081,
+            1
+          ],
+          "explode": [
+            -30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "frame7u-1-0",
+          "category": "panel",
+          "panel": "frame7u",
+          "matrix": [
+            0,
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            103.6,
+            -157.377228,
+            0,
+            1
+          ],
+          "explode": [
+            55,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u-1-1",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            103.6,
+            -157.377228,
+            0,
+            1
+          ],
+          "explode": [
+            30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u-1-2",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            103.6,
+            -22.845368000000008,
+            0,
+            1
+          ],
+          "explode": [
+            30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "casePad1u-1-3",
+          "category": "panel",
+          "panel": "casePad1u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            103.6,
+            111.66179899999997,
+            0.025081,
+            1
+          ],
+          "explode": [
+            30,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    "RAIL-7U-NY-WH-60": {
+      "selection": {
+        "height": "7U",
+        "width": 60,
+        "style": "NY",
+        "color": "WH"
+      },
+      "bom": [
+        {
+          "name": "single レール本体",
+          "count": 2,
+          "material": "9000HE Resin / 白"
+        },
+        {
+          "name": "double レール本体",
+          "count": 2,
+          "material": "9000HE Resin / 白"
+        },
+        {
+          "name": "ナイロンバー",
+          "count": 6,
+          "material": "ナイロン（本体樹脂とは別）"
+        },
+        {
+          "name": "7U side frame",
+          "count": 2,
+          "material": "アルミPCB 1.6 mm / 左右各1枚"
+        },
+        {
+          "name": "3U pad",
+          "count": 4,
+          "material": "アルミPCB 1.6 mm"
+        },
+        {
+          "name": "1U pad",
+          "count": 2,
+          "material": "アルミPCB 1.6 mm / 中央開口付き"
+        }
+      ],
+      "status": "preview-unverified-fit",
+      "parts": [
+        {
+          "id": "single-0",
+          "category": "body",
+          "asset": "nylon-single-v3-60hp.stl",
+          "matrix": [
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            152.5,
+            -146.1438345,
+            -29.4205805,
+            1
+          ],
+          "explode": [
+            0,
+            -25,
+            0
+          ]
+        },
+        {
+          "id": "bar-single-0",
+          "category": "bar",
+          "asset": "bar-60hp.stl",
+          "matrix": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            152.359024,
+            -148.608663,
+            -8.7044775,
+            1
+          ],
+          "explode": [
+            0,
+            -25,
+            32
+          ]
+        },
+        {
+          "id": "single-1",
+          "category": "body",
+          "asset": "nylon-single-v3-60hp.stl",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -152.5,
+            146.1438325,
+            -29.4205805,
+            1
+          ],
+          "explode": [
+            0,
+            25,
+            0
+          ]
+        },
+        {
+          "id": "bar-single-1",
+          "category": "bar",
+          "asset": "bar-60hp.stl",
+          "matrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -152.359024,
+            148.608661,
+            -8.7044775,
+            1
+          ],
+          "explode": [
+            0,
+            25,
+            32
+          ]
+        },
+        {
+          "id": "double-0",
+          "category": "body",
+          "asset": "nylon-double-v2-60hp.stl",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -152.5,
+            -33.95555975,
+            -20.1964495,
+            1
+          ],
+          "explode": [
+            0,
+            0,
+            -30
+          ]
+        },
+        {
+          "id": "bar-double-0-0",
+          "category": "bar",
+          "asset": "bar-60hp.stl",
+          "matrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -152.359024,
+            -31.48973525,
+            -8.7070695,
+            1
+          ],
+          "explode": [
+            0,
+            0,
+            32
+          ]
+        },
+        {
+          "id": "bar-double-0-1",
+          "category": "bar",
+          "asset": "bar-60hp.stl",
+          "matrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -152.359024,
+            -19.69873525,
+            -8.7070695,
+            1
+          ],
+          "explode": [
+            0,
+            0,
+            32
+          ]
+        },
+        {
+          "id": "double-1",
+          "category": "body",
+          "asset": "nylon-double-v2-60hp.stl",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -152.5,
+            100.55866174999997,
+            -20.1964495,
+            1
+          ],
+          "explode": [
+            0,
+            0,
+            -30
+          ]
+        },
+        {
+          "id": "bar-double-1-0",
+          "category": "bar",
+          "asset": "bar-60hp.stl",
+          "matrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -152.359024,
+            103.02448624999997,
+            -8.7070695,
+            1
+          ],
+          "explode": [
+            0,
+            0,
+            32
+          ]
+        },
+        {
+          "id": "bar-double-1-1",
+          "category": "bar",
+          "asset": "bar-60hp.stl",
+          "matrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -152.359024,
+            114.81548624999996,
+            -8.7070695,
+            1
+          ],
+          "explode": [
+            0,
+            0,
+            32
+          ]
+        },
+        {
+          "id": "frame7u--1-0",
+          "category": "panel",
+          "panel": "frame7u",
+          "matrix": [
+            0,
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -155.7,
+            -157.377228,
+            0,
+            1
+          ],
+          "explode": [
+            -55,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u--1-1",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -152.5,
+            -157.377228,
+            0,
+            1
+          ],
+          "explode": [
+            -30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u--1-2",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -152.5,
+            -22.845368000000008,
+            0,
+            1
+          ],
+          "explode": [
+            -30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "casePad1u--1-3",
+          "category": "panel",
+          "panel": "casePad1u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -152.5,
+            111.66179899999997,
+            0.025081,
+            1
+          ],
+          "explode": [
+            -30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "frame7u-1-0",
+          "category": "panel",
+          "panel": "frame7u",
+          "matrix": [
+            0,
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            154.1,
+            -157.377228,
+            0,
+            1
+          ],
+          "explode": [
+            55,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u-1-1",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            154.1,
+            -157.377228,
+            0,
+            1
+          ],
+          "explode": [
+            30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u-1-2",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            154.1,
+            -22.845368000000008,
+            0,
+            1
+          ],
+          "explode": [
+            30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "casePad1u-1-3",
+          "category": "panel",
+          "panel": "casePad1u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            154.1,
+            111.66179899999997,
+            0.025081,
+            1
+          ],
+          "explode": [
+            30,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    "RAIL-7U-NY-BK-60": {
+      "selection": {
+        "height": "7U",
+        "width": 60,
+        "style": "NY",
+        "color": "BK"
+      },
+      "bom": [
+        {
+          "name": "single レール本体",
+          "count": 2,
+          "material": "JLC Black Resin / 黒"
+        },
+        {
+          "name": "double レール本体",
+          "count": 2,
+          "material": "JLC Black Resin / 黒"
+        },
+        {
+          "name": "ナイロンバー",
+          "count": 6,
+          "material": "ナイロン（本体樹脂とは別）"
+        },
+        {
+          "name": "7U side frame",
+          "count": 2,
+          "material": "アルミPCB 1.6 mm / 左右各1枚"
+        },
+        {
+          "name": "3U pad",
+          "count": 4,
+          "material": "アルミPCB 1.6 mm"
+        },
+        {
+          "name": "1U pad",
+          "count": 2,
+          "material": "アルミPCB 1.6 mm / 中央開口付き"
+        }
+      ],
+      "status": "preview-unverified-fit",
+      "parts": [
+        {
+          "id": "single-0",
+          "category": "body",
+          "asset": "nylon-single-v3-60hp.stl",
+          "matrix": [
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            152.5,
+            -146.1438345,
+            -29.4205805,
+            1
+          ],
+          "explode": [
+            0,
+            -25,
+            0
+          ]
+        },
+        {
+          "id": "bar-single-0",
+          "category": "bar",
+          "asset": "bar-60hp.stl",
+          "matrix": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            152.359024,
+            -148.608663,
+            -8.7044775,
+            1
+          ],
+          "explode": [
+            0,
+            -25,
+            32
+          ]
+        },
+        {
+          "id": "single-1",
+          "category": "body",
+          "asset": "nylon-single-v3-60hp.stl",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -152.5,
+            146.1438325,
+            -29.4205805,
+            1
+          ],
+          "explode": [
+            0,
+            25,
+            0
+          ]
+        },
+        {
+          "id": "bar-single-1",
+          "category": "bar",
+          "asset": "bar-60hp.stl",
+          "matrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -152.359024,
+            148.608661,
+            -8.7044775,
+            1
+          ],
+          "explode": [
+            0,
+            25,
+            32
+          ]
+        },
+        {
+          "id": "double-0",
+          "category": "body",
+          "asset": "nylon-double-v2-60hp.stl",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -152.5,
+            -33.95555975,
+            -20.1964495,
+            1
+          ],
+          "explode": [
+            0,
+            0,
+            -30
+          ]
+        },
+        {
+          "id": "bar-double-0-0",
+          "category": "bar",
+          "asset": "bar-60hp.stl",
+          "matrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -152.359024,
+            -31.48973525,
+            -8.7070695,
+            1
+          ],
+          "explode": [
+            0,
+            0,
+            32
+          ]
+        },
+        {
+          "id": "bar-double-0-1",
+          "category": "bar",
+          "asset": "bar-60hp.stl",
+          "matrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -152.359024,
+            -19.69873525,
+            -8.7070695,
+            1
+          ],
+          "explode": [
+            0,
+            0,
+            32
+          ]
+        },
+        {
+          "id": "double-1",
+          "category": "body",
+          "asset": "nylon-double-v2-60hp.stl",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -152.5,
+            100.55866174999997,
+            -20.1964495,
+            1
+          ],
+          "explode": [
+            0,
+            0,
+            -30
+          ]
+        },
+        {
+          "id": "bar-double-1-0",
+          "category": "bar",
+          "asset": "bar-60hp.stl",
+          "matrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -152.359024,
+            103.02448624999997,
+            -8.7070695,
+            1
+          ],
+          "explode": [
+            0,
+            0,
+            32
+          ]
+        },
+        {
+          "id": "bar-double-1-1",
+          "category": "bar",
+          "asset": "bar-60hp.stl",
+          "matrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -152.359024,
+            114.81548624999996,
+            -8.7070695,
+            1
+          ],
+          "explode": [
+            0,
+            0,
+            32
+          ]
+        },
+        {
+          "id": "frame7u--1-0",
+          "category": "panel",
+          "panel": "frame7u",
+          "matrix": [
+            0,
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -155.7,
+            -157.377228,
+            0,
+            1
+          ],
+          "explode": [
+            -55,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u--1-1",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -152.5,
+            -157.377228,
+            0,
+            1
+          ],
+          "explode": [
+            -30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u--1-2",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -152.5,
+            -22.845368000000008,
+            0,
+            1
+          ],
+          "explode": [
+            -30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "casePad1u--1-3",
+          "category": "panel",
+          "panel": "casePad1u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -152.5,
+            111.66179899999997,
+            0.025081,
+            1
+          ],
+          "explode": [
+            -30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "frame7u-1-0",
+          "category": "panel",
+          "panel": "frame7u",
+          "matrix": [
+            0,
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            154.1,
+            -157.377228,
+            0,
+            1
+          ],
+          "explode": [
+            55,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u-1-1",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            154.1,
+            -157.377228,
+            0,
+            1
+          ],
+          "explode": [
+            30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u-1-2",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            154.1,
+            -22.845368000000008,
+            0,
+            1
+          ],
+          "explode": [
+            30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "casePad1u-1-3",
+          "category": "panel",
+          "panel": "casePad1u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            154.1,
+            111.66179899999997,
+            0.025081,
+            1
+          ],
+          "explode": [
+            30,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    "RAIL-7U-NU-WH-60": {
+      "selection": {
+        "height": "7U",
+        "width": 60,
+        "style": "NU",
+        "color": "WH"
+      },
+      "bom": [
+        {
+          "name": "single レール本体",
+          "count": 2,
+          "material": "9000HE Resin / 白"
+        },
+        {
+          "name": "double レール本体",
+          "count": 2,
+          "material": "9000HE Resin / 白"
+        },
+        {
+          "name": "スライドナット",
+          "count": 360,
+          "material": "金属（単体形状未取得）"
+        },
+        {
+          "name": "7U side frame",
+          "count": 2,
+          "material": "アルミPCB 1.6 mm / 左右各1枚"
+        },
+        {
+          "name": "3U pad",
+          "count": 4,
+          "material": "アルミPCB 1.6 mm"
+        },
+        {
+          "name": "1U pad",
+          "count": 2,
+          "material": "アルミPCB 1.6 mm / 中央開口付き"
+        }
+      ],
+      "status": "preview-unverified-fit",
+      "parts": [
+        {
+          "id": "single-0",
+          "category": "body",
+          "asset": "nuts-single-v3-60hp.stl",
+          "matrix": [
+            0,
+            0,
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            152.5,
+            -144.5903486845703,
+            -0.064455619628907,
+            1
+          ],
+          "explode": [
+            0,
+            -25,
+            0
+          ]
+        },
+        {
+          "id": "single-1",
+          "category": "body",
+          "asset": "nuts-single-v3-60hp.stl",
+          "matrix": [
+            0,
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -152.5,
+            144.5903466845703,
+            -0.064455619628907,
+            1
+          ],
+          "explode": [
+            0,
+            25,
+            0
+          ]
+        },
+        {
+          "id": "double-0",
+          "category": "body",
+          "asset": "nuts-double-v2-60hp.stl",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -152.5,
+            -35.51480175,
+            -20.1964495,
+            1
+          ],
+          "explode": [
+            0,
+            0,
+            -30
+          ]
+        },
+        {
+          "id": "double-1",
+          "category": "body",
+          "asset": "nuts-double-v2-60hp.stl",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -152.5,
+            98.99941974999996,
+            -20.1964495,
+            1
+          ],
+          "explode": [
+            0,
+            0,
+            -30
+          ]
+        },
+        {
+          "id": "frame7u--1-0",
+          "category": "panel",
+          "panel": "frame7u",
+          "matrix": [
+            0,
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -155.7,
+            -157.377228,
+            0,
+            1
+          ],
+          "explode": [
+            -55,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u--1-1",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -152.5,
+            -157.377228,
+            0,
+            1
+          ],
+          "explode": [
+            -30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u--1-2",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -152.5,
+            -22.845368000000008,
+            0,
+            1
+          ],
+          "explode": [
+            -30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "casePad1u--1-3",
+          "category": "panel",
+          "panel": "casePad1u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -152.5,
+            111.66179899999997,
+            0.025081,
+            1
+          ],
+          "explode": [
+            -30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "frame7u-1-0",
+          "category": "panel",
+          "panel": "frame7u",
+          "matrix": [
+            0,
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            154.1,
+            -157.377228,
+            0,
+            1
+          ],
+          "explode": [
+            55,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u-1-1",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            154.1,
+            -157.377228,
+            0,
+            1
+          ],
+          "explode": [
+            30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u-1-2",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            154.1,
+            -22.845368000000008,
+            0,
+            1
+          ],
+          "explode": [
+            30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "casePad1u-1-3",
+          "category": "panel",
+          "panel": "casePad1u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            154.1,
+            111.66179899999997,
+            0.025081,
+            1
+          ],
+          "explode": [
+            30,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    "RAIL-7U-NU-BK-60": {
+      "selection": {
+        "height": "7U",
+        "width": 60,
+        "style": "NU",
+        "color": "BK"
+      },
+      "bom": [
+        {
+          "name": "single レール本体",
+          "count": 2,
+          "material": "JLC Black Resin / 黒"
+        },
+        {
+          "name": "double レール本体",
+          "count": 2,
+          "material": "JLC Black Resin / 黒"
+        },
+        {
+          "name": "スライドナット",
+          "count": 360,
+          "material": "金属（単体形状未取得）"
+        },
+        {
+          "name": "7U side frame",
+          "count": 2,
+          "material": "アルミPCB 1.6 mm / 左右各1枚"
+        },
+        {
+          "name": "3U pad",
+          "count": 4,
+          "material": "アルミPCB 1.6 mm"
+        },
+        {
+          "name": "1U pad",
+          "count": 2,
+          "material": "アルミPCB 1.6 mm / 中央開口付き"
+        }
+      ],
+      "status": "preview-unverified-fit",
+      "parts": [
+        {
+          "id": "single-0",
+          "category": "body",
+          "asset": "nuts-single-v3-60hp.stl",
+          "matrix": [
+            0,
+            0,
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            152.5,
+            -144.5903486845703,
+            -0.064455619628907,
+            1
+          ],
+          "explode": [
+            0,
+            -25,
+            0
+          ]
+        },
+        {
+          "id": "single-1",
+          "category": "body",
+          "asset": "nuts-single-v3-60hp.stl",
+          "matrix": [
+            0,
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -152.5,
+            144.5903466845703,
+            -0.064455619628907,
+            1
+          ],
+          "explode": [
+            0,
+            25,
+            0
+          ]
+        },
+        {
+          "id": "double-0",
+          "category": "body",
+          "asset": "nuts-double-v2-60hp.stl",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -152.5,
+            -35.51480175,
+            -20.1964495,
+            1
+          ],
+          "explode": [
+            0,
+            0,
+            -30
+          ]
+        },
+        {
+          "id": "double-1",
+          "category": "body",
+          "asset": "nuts-double-v2-60hp.stl",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -152.5,
+            98.99941974999996,
+            -20.1964495,
+            1
+          ],
+          "explode": [
+            0,
+            0,
+            -30
+          ]
+        },
+        {
+          "id": "frame7u--1-0",
+          "category": "panel",
+          "panel": "frame7u",
+          "matrix": [
+            0,
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -155.7,
+            -157.377228,
+            0,
+            1
+          ],
+          "explode": [
+            -55,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u--1-1",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -152.5,
+            -157.377228,
+            0,
+            1
+          ],
+          "explode": [
+            -30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u--1-2",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -152.5,
+            -22.845368000000008,
+            0,
+            1
+          ],
+          "explode": [
+            -30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "casePad1u--1-3",
+          "category": "panel",
+          "panel": "casePad1u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -152.5,
+            111.66179899999997,
+            0.025081,
+            1
+          ],
+          "explode": [
+            -30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "frame7u-1-0",
+          "category": "panel",
+          "panel": "frame7u",
+          "matrix": [
+            0,
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            154.1,
+            -157.377228,
+            0,
+            1
+          ],
+          "explode": [
+            55,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u-1-1",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            154.1,
+            -157.377228,
+            0,
+            1
+          ],
+          "explode": [
+            30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "pad3u-1-2",
+          "category": "panel",
+          "panel": "pad3u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            154.1,
+            -22.845368000000008,
+            0,
+            1
+          ],
+          "explode": [
+            30,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "casePad1u-1-3",
+          "category": "panel",
+          "panel": "casePad1u",
+          "matrix": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            154.1,
+            111.66179899999997,
+            0.025081,
+            1
+          ],
+          "explode": [
+            30,
+            0,
+            0
+          ]
+        }
+      ]
+    }
+  }
+}

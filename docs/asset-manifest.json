@@ -335,7 +335,7 @@
   },
   "limitations": [
     "Recess centers inferred from opposed mesh flats; not native CAD mating datums.",
-    "7U side-frame BOM x1 not yet resolved as plate/set; source is one continuous plate and case uses two.",
+    "User confirmed case-style assembly: two actual 7U side-frame plates, one each side; previous costing x1 not a physical plate count; source is one continuous plate and case uses two.",
     "User P75 source differs from case 1U pad; both retained.",
     "Mesh edge closure does not prove self-intersection freedom, physical fit or manufacturing acceptance.",
     "No identity established with repaired Mac or JLC-uploaded bytes."

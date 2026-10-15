@@ -26,3 +26,21 @@ for (const meta of Object.values(panels))
     meta.path,
   );
 console.info("Rail and panel source hashes verified");
+
+const { execFileSync } = await import("node:child_process");
+const { mkdtempSync, rmSync } = await import("node:fs");
+const { tmpdir } = await import("node:os");
+const { join } = await import("node:path");
+const dir = mkdtempSync(join(tmpdir(), "rail-contours-"));
+try {
+  const output = join(dir, "contours.json");
+  execFileSync("python3", ["scripts/extract-panels.py", "--output", output]);
+  assert.deepEqual(
+    JSON.parse(readFileSync(output)),
+    panels,
+    "Generated PCB contours differ from source",
+  );
+} finally {
+  rmSync(dir, { recursive: true });
+}
+console.info("Generated PCB contours verified against retained sources");

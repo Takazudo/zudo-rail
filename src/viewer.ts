@@ -81,6 +81,10 @@ export function createRailViewer(host: HTMLElement, options: ViewerOptions) {
         : view === "side"
           ? new THREE.Vector3(1, 0, 0)
           : new THREE.Vector3(0.9, -1.25, 1.6).normalize();
+    const damping = controls.enableDamping;
+    controls.enableDamping = false;
+    controls.update();
+    controls.enableDamping = damping;
     camera.position.copy(center).addScaledVector(direction, distance);
     controls.target.copy(center);
     camera.near = 0.1;
@@ -189,6 +193,11 @@ export function createRailViewer(host: HTMLElement, options: ViewerOptions) {
     snapshot() {
       return {
         parts: group.children.length,
+        items: group.children.map((o) => ({
+          id: o.userData.part.id as string,
+          visible: o.visible,
+          position: o.position.toArray(),
+        })),
         camera: camera.position.toArray(),
         target: controls.target.toArray(),
       };

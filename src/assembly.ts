@@ -10,7 +10,7 @@ export type Part = {
   id: string;
   category: "body" | "bar" | "panel";
   asset?: string;
-  panel?: "frame3u" | "pad3u";
+  panel?: "frame3u" | "frame7u" | "pad3u" | "casePad1u";
   matrix: number[];
   explode: [number, number, number];
 };
@@ -58,9 +58,8 @@ export function bom(s: Selection) {
     },
     {
       name: `${s.height} side frame`,
-      count: s.height === "3U" ? 2 : 1,
-      material:
-        "アルミPCB 1.6 mm" + (s.height === "7U" ? " / 数量単位を確認中" : ""),
+      count: 2,
+      material: "アルミPCB 1.6 mm / 左右各1枚",
     },
     {
       name: "3U pad",
@@ -68,7 +67,13 @@ export function bom(s: Selection) {
       material: "アルミPCB 1.6 mm",
     },
     ...(s.height === "7U"
-      ? [{ name: "1U pad", count: 2, material: "PCB対応を確認中" }]
+      ? [
+          {
+            name: "1U pad",
+            count: 2,
+            material: "アルミPCB 1.6 mm / 中央開口付き",
+          },
+        ]
       : []),
   ];
 }
@@ -77,16 +82,51 @@ function matrix(...rows: number[]) {
 }
 export function assembly(s: Selection): Part[] {
   validateSelection(s);
-  if (s.height === "7U")
-    throw new Error(
-      "7Uは side frame ×1 の単位と1U padの資産対応を確認中です。数量や接続を推測せず、組立表示を保留しています。",
-    );
   const L = s.width === 40 ? 204 : 305;
+  const is7 = s.height === "7U";
+  const center = is7 ? 157.377228 : 67.26593;
+  const v = is7 ? 14.9950205 : 15.0303175;
+  const endpoints = is7 ? [6.0332935, 308.7211605] : [5.997998, 128.533836];
   const parts: Part[] = [];
-  for (const [i, u] of [5.997998, 128.533836].entries()) {
+  const barLength = s.width === 40 ? 203.203278 : 304.718048;
+  const barWidth = s.width === 40 ? 5.503433 : 5.502998;
+  function addBar(
+    id: string,
+    bodyMatrix: number[],
+    cavity: [number, number],
+    bottom: number,
+    explode: [number, number, number],
+  ) {
+    const local = new Matrix4().set(
+      0,
+      1,
+      0,
+      (cavity[0] + cavity[1] - barWidth) / 2,
+      0,
+      0,
+      1,
+      bottom,
+      1,
+      0,
+      0,
+      (L - barLength) / 2,
+      0,
+      0,
+      0,
+      1,
+    );
+    parts.push({
+      id,
+      category: "bar",
+      asset: `bar-${s.width}hp.stl`,
+      matrix: new Matrix4().fromArray(bodyMatrix).multiply(local).toArray(),
+      explode,
+    });
+  }
+  for (const [i, u] of endpoints.entries()) {
     const sign = i === 0 ? -1 : 1;
-    const y = u - 67.26593,
-      z = -15.0303175;
+    const y = u - center,
+      z = -v;
     const transform =
       s.style === "NU"
         ? matrix(
@@ -126,71 +166,114 @@ export function assembly(s: Selection): Part[] {
             1,
           );
     parts.push({
-      id: `body-${i}`,
+      id: `single-${i}`,
       category: "body",
       asset: `${s.style === "NY" ? "nylon" : "nuts"}-single-v3-${s.width}hp.stl`,
       matrix: transform,
       explode: [0, sign * 25, 0],
     });
-    if (s.style === "NY") {
-      const barLength = s.width === 40 ? 203.203278 : 304.718048;
-      const local = new Matrix4().set(
+    if (s.style === "NY")
+      addBar(`bar-single-${i}`, transform, [2.300804, 8.131851], 20.716103, [
+        0,
+        sign * 25,
+        32,
+      ]);
+  }
+  if (is7) {
+    // Case PCB axes retained: new double pitch leaves ~0.08–0.10 mm residual per hole, never stretched.
+    for (const [i, pair] of [
+      [128.533836, 140.5298535],
+      [263.030426, 275.0617065],
+    ].entries()) {
+      const c =
+        s.style === "NY"
+          ? (5.197922 + 17.022431) / 2
+          : (6.752716 + 18.586121) / 2;
+      const transform = matrix(
+        0,
+        0,
+        1,
+        -L / 2,
+        1,
+        0,
+        0,
+        (pair[0] + pair[1]) / 2 - center - c,
         0,
         1,
         0,
-        2.46461,
-        0,
-        0,
-        1,
-        20.716103,
-        1,
-        0,
-        0,
-        (L - barLength) / 2,
+        -v - 5.201429,
         0,
         0,
         0,
         1,
       );
-      const m = new Matrix4().fromArray(transform).multiply(local);
       parts.push({
-        id: `bar-${i}`,
-        category: "bar",
-        asset: `bar-${s.width}hp.stl`,
-        matrix: m.toArray(),
-        explode: [0, sign * 25, 32],
+        id: `double-${i}`,
+        category: "body",
+        asset: `${s.style === "NY" ? "nylon" : "nuts"}-double-v2-${s.width}hp.stl`,
+        matrix: transform,
+        explode: [0, 0, -30],
       });
+      if (s.style === "NY")
+        for (const [j, cavity] of (
+          [
+            [2.300003, 8.134644],
+            [14.092758, 19.923889],
+          ] as [number, number][]
+        ).entries())
+          addBar(
+            `bar-double-${i}-${j}`,
+            transform,
+            cavity,
+            11.48938,
+            [0, 0, 32],
+          );
     }
   }
   for (const sign of [-1, 1]) {
-    for (const [panel, offset] of [
-      ["pad3u", 0],
-      ["frame3u", 1.6],
-    ] as const) {
-      // Source XY = row/depth; extrusion axis = rail width. End tabs wrap the outer panel edge.
+    const layers: {
+      panel: NonNullable<Part["panel"]>;
+      offset: number;
+      u: number;
+      v: number;
+    }[] = [
+      { panel: is7 ? "frame7u" : "frame3u", offset: 1.6, u: 0, v: 0 },
+      { panel: "pad3u", offset: 0, u: 0, v: 0 },
+    ];
+    if (is7)
+      layers.push(
+        { panel: "pad3u", offset: 0, u: 134.53186, v: 0 },
+        { panel: "casePad1u", offset: 0, u: 269.039027, v: -0.025081 },
+      );
+    for (const [i, layer] of layers.entries()) {
+      const lowerX = sign * (L / 2 + layer.offset) + (sign < 0 ? -1.6 : 0);
+      const transform =
+        layer.panel === "frame7u"
+          ? matrix(0, 0, 1, lowerX, 0, 1, 0, -center, -1, 0, 0, 0, 0, 0, 0, 1)
+          : matrix(
+              0,
+              0,
+              -1,
+              lowerX + 1.6,
+              1,
+              0,
+              0,
+              layer.u - center,
+              0,
+              -1,
+              0,
+              -layer.v,
+              0,
+              0,
+              0,
+              1,
+            );
       parts.push({
-        id: `${panel}-${sign}`,
+        id: `${layer.panel}-${sign}-${i}`,
         category: "panel",
-        panel,
-        matrix: matrix(
-          0,
-          0,
-          1,
-          sign * (L / 2 + offset) + (sign < 0 ? -1.6 : 0),
-          1,
-          0,
-          0,
-          -67.26593,
-          0,
-          -1,
-          0,
-          0,
-          0,
-          0,
-          0,
-          1,
-        ),
-        explode: [sign * (panel === "frame3u" ? 55 : 30), 0, 0],
+        panel: layer.panel,
+        matrix: transform,
+        explode: [sign * (layer.offset ? 55 : 30), 0, 0],
       });
     }
   }

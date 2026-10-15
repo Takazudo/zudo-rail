@@ -17,15 +17,15 @@
 ## 確定要件
 
 - 3U: single x2、NY bar x2 または NU nut x80/x120、3U frame x2、3U pad x2。
-- 7U: single x2 + double x2、NY bar x6 または NU nut x240/x360、7U frame x1（単位要確認）、3U pad x4、1U pad x2。
+- 7U: single x2 + double x2、NY bar x6 または NU nut x240/x360、7U frame 実板x2（追加回答で左右1枚ずつ確定、以前の原価用x1は流用しない）、3U pad x4、1U pad x2。
 - WH = 9000HE Resin、BK = JLC Black Resin。本体樹脂とナイロンバー/金属ナットを区別。価格・外箱・10BOX・製造保証は含めない。
 - 実形状は比例拡縮しない。Mac の修復データはアクセスせず、GitHub バイトとの同一性は保証しない。
 
 ## 判断と確認事項
 
 - zudo-case は side frame/fixer 1.6mm と padder 1.6mm を片側で重ねる。板を無条件で2倍にしない。
-- 7U は 3U+3U+1U を同一平面に配置。既存例は7U frameを左右に計2枚使用。今回のBOM x1がセット単位かは質問中。
-- 指定の1U PCB名と既存例の1u-padderは異なる。対応を質問中。
+- 7U は 3U+3U+1U を同一平面に配置。既存例は7U frameを左右に計2枚使用。追加回答で同じ左右2枚の組立を採用。
+- 指定の1U PCB名と既存例の1u-padderは異なる。追加回答で中央開口付き1u-padderを採用（P75は概算原価用）。
 - 既存例は旧single rail。新double railの軸間隔と新singleの端部を実測し、差を隠して強制配置しない。
 - 公開deployment設定は未設置。新規サービスや認証・課金設定を作成しない。
 
@@ -38,3 +38,7 @@
 - NU double の両幅について、面重複・閉じた辺・寸法を検証し、Mac修復とのバイト同一性とは区別する。
 - 全16選択をブラウザで実行し、3U/40、3U/60、7U/40、7U/60の画像を保持。NY/NU、白/黒も代表画像に含める。
 - 公開境界: typed selection、asset URL resolver、onSelection/onError、dispose（WebGL・listener解放）。
+
+## 確認完了
+
+2026-10-15の追加回答で7Uの左右frame2枚・中央開口付き1U padが確定。原価は概算用途のため会計照合は対象外。全16構成を実装し、旧確認待ち画面とテストを置換した。独立計画レビューと実装/形状レビューを実施し、CSS隔離・生成輪郭照合・操作検証・reset慣性を修正。

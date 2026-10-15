@@ -223,4 +223,17 @@ test("insert colors stay independent of body and nuts are instanced", async ({
       (x) => !x.visible,
     ),
   ).toHaveLength(6);
+  await page.locator("[data-layer=nut]").check();
+  await page.locator("[name=height]").selectOption("3U");
+  await page.locator("[name=width]").selectOption("40");
+  await expect(page.locator(".scene-message")).toHaveAttribute(
+    "data-state",
+    "ready",
+  );
+  await page.locator(".explode").fill("30");
+  for (let i = 0; i < 4; i++)
+    await page.getByRole("button", { name: "拡大", exact: true }).click();
+  await page
+    .locator("canvas")
+    .screenshot({ path: "docs/screenshots/nut-detail.png" });
 });

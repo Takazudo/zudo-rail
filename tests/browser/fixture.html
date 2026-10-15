@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+  </head>
+  <body>
+    <main id="host-main">Host content</main>
+    <div id="fixture"></div>
+    <script type="module">
+      import { mountRailPreview } from "/src/preview.ts";
+      window.rail = mountRailPreview(document.querySelector("#fixture"));
+    </script>
+  </body>
+</html>

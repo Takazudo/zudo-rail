@@ -8,8 +8,9 @@ export type Selection = {
 };
 export type Part = {
   id: string;
-  category: "body" | "bar" | "panel";
+  category: "body" | "bar" | "panel" | "nut";
   asset?: string;
+  instances?: number[][];
   panel?: "frame3u" | "frame7u" | "pad3u" | "casePad1u";
   matrix: number[];
   explode: [number, number, number];
@@ -53,8 +54,8 @@ export function bom(s: Selection) {
       count: s.style === "NY" ? rows : rows * s.width,
       material:
         s.style === "NY"
-          ? "ナイロン（本体樹脂とは別）"
-          : "金属（単体形状未取得）",
+          ? "黒 / JLC3DP ナイロン（本体樹脂とは別）"
+          : "銀色 / M3 炭素鋼（表示形状は近似）",
     },
     {
       name: `${s.height} side frame`,
@@ -123,6 +124,65 @@ export function assembly(s: Selection): Part[] {
       explode,
     });
   }
+  function addNuts(
+    id: string,
+    bodyMatrix: number[],
+    single: boolean,
+    channel = 0,
+    explode: [number, number, number],
+  ) {
+    const instances = Array.from({ length: s.width }, (_, i) => {
+      const position = ((i + 0.5) * L) / s.width;
+      const local = single
+        ? matrix(
+            0,
+            0,
+            -1,
+            6.9,
+            1,
+            0,
+            0,
+            6.642464,
+            0,
+            -1,
+            0,
+            position,
+            0,
+            0,
+            0,
+            1,
+          )
+        : matrix(
+            1,
+            0,
+            0,
+            channel === 0 ? 6.64338 : 18.6972,
+            0,
+            0,
+            1,
+            13.232,
+            0,
+            -1,
+            0,
+            position,
+            0,
+            0,
+            0,
+            1,
+          );
+      return new Matrix4()
+        .fromArray(bodyMatrix)
+        .multiply(new Matrix4().fromArray(local))
+        .toArray();
+    });
+    parts.push({
+      id,
+      category: "nut",
+      matrix: new Matrix4().toArray(),
+      instances,
+      explode,
+    });
+  }
   for (const [i, u] of endpoints.entries()) {
     const sign = i === 0 ? -1 : 1;
     const y = u - center,
@@ -178,6 +238,7 @@ export function assembly(s: Selection): Part[] {
         sign * 25,
         32,
       ]);
+    else addNuts(`nuts-single-${i}`, transform, true, 0, [0, sign * 25, 32]);
   }
   if (is7) {
     // Case PCB axes retained: new double pitch leaves ~0.08–0.10 mm residual per hole, never stretched.
@@ -228,6 +289,9 @@ export function assembly(s: Selection): Part[] {
             11.48938,
             [0, 0, 32],
           );
+      else
+        for (const j of [0, 1])
+          addNuts(`nuts-double-${i}-${j}`, transform, false, j, [0, 0, 32]);
     }
   }
   for (const sign of [-1, 1]) {

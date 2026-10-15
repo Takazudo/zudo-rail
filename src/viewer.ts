@@ -1,6 +1,11 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { STLLoader } from "three/addons/loaders/STLLoader.js";
+import {
+  assignPanelSurfaces,
+  createNutGeometry,
+  insertColors,
+} from "./visual-materials";
 import contours from "./panel-contours.json";
 import { assembly, type Selection, type Part } from "./assembly";
 
@@ -35,7 +40,7 @@ export function createRailViewer(host: HTMLElement, options: ViewerOptions) {
   let version = 0,
     disposed = false,
     explode = 0;
-  const visible = { body: true, bar: true, panel: true };
+  const visible = { body: true, bar: true, panel: true, nut: true };
   const cache = new Map<string, THREE.BufferGeometry>();
   const loader = new STLLoader();
   const bounds = new THREE.Box3();
@@ -59,12 +64,16 @@ export function createRailViewer(host: HTMLElement, options: ViewerOptions) {
   function disposeGroup(g: THREE.Group) {
     g.traverse((o) => {
       if (o instanceof THREE.Mesh) {
-        o.material.dispose();
+        for (const material of Array.isArray(o.material)
+          ? o.material
+          : [o.material])
+          material.dispose();
+        if (o instanceof THREE.InstancedMesh) o.dispose();
         if (o.userData.generated) o.geometry.dispose();
       }
     });
   }
-  function fit(view: "iso" | "front" | "side" = "iso") {
+  function fit(view: "iso" | "front" | "side" | "left" = "iso") {
     if (!group.children.length) return;
     bounds.setFromObject(group);
     const center = bounds.getCenter(new THREE.Vector3()),
@@ -80,7 +89,9 @@ export function createRailViewer(host: HTMLElement, options: ViewerOptions) {
         ? new THREE.Vector3(0, 0, 1)
         : view === "side"
           ? new THREE.Vector3(1, 0, 0)
-          : new THREE.Vector3(0.9, -1.25, 1.6).normalize();
+          : view === "left"
+            ? new THREE.Vector3(-1, 0, 0)
+            : new THREE.Vector3(0.9, -1.25, 1.6).normalize();
     const damping = controls.enableDamping;
     controls.enableDamping = false;
     controls.update();
@@ -139,31 +150,52 @@ export function createRailViewer(host: HTMLElement, options: ViewerOptions) {
             bevelEnabled: false,
             curveSegments: 1,
           });
-        } else geometry = cache.get(p.asset!)!;
+          assignPanelSurfaces(geometry, p);
+        } else if (p.instances) geometry = createNutGeometry();
+        else geometry = cache.get(p.asset!)!;
         const color =
           p.category === "body"
             ? selection.color === "WH"
               ? 0xf8f6ee
               : 0x282c31
             : p.category === "bar"
-              ? 0xc7bca2
-              : 0x73818d;
+              ? insertColors.bar
+              : p.category === "nut"
+                ? insertColors.nut
+                : 0xc4c8cc;
         const material = new THREE.MeshStandardMaterial({
           color,
           roughness: p.category === "panel" ? 0.5 : 0.7,
-          metalness: p.category === "panel" ? 0.65 : 0,
+          metalness: p.category === "panel" || p.category === "nut" ? 0.65 : 0,
         });
-        const mesh = new THREE.Mesh(geometry, material);
+        const materials = p.panel
+          ? [
+              material,
+              new THREE.MeshStandardMaterial({
+                color: 0x202124,
+                roughness: 0.7,
+              }),
+            ]
+          : material;
+        const mesh = p.instances
+          ? new THREE.InstancedMesh(geometry, materials, p.instances.length)
+          : new THREE.Mesh(geometry, materials);
+        if (mesh instanceof THREE.InstancedMesh)
+          p.instances!.forEach((m, i) =>
+            mesh.setMatrixAt(i, new THREE.Matrix4().fromArray(m)),
+          );
         mesh.applyMatrix4(new THREE.Matrix4().fromArray(p.matrix));
         const wrapper = new THREE.Group();
         wrapper.userData.part = p;
-        mesh.userData.generated = !!p.panel;
+        mesh.userData.generated = !!p.panel || !!p.instances;
         wrapper.add(mesh);
         group.add(wrapper);
       }
       applyDisplay();
       fit();
-      options.onReady?.(parts.length);
+      options.onReady?.(
+        parts.reduce((sum, p) => sum + (p.instances?.length ?? 1), 0),
+      );
     } catch (reason) {
       if (!disposed && request === version)
         options.onError?.(
@@ -196,6 +228,15 @@ export function createRailViewer(host: HTMLElement, options: ViewerOptions) {
         items: group.children.map((o) => ({
           id: o.userData.part.id as string,
           visible: o.visible,
+          instances: (o.userData.part as Part).instances?.length ?? 0,
+          color:
+            (o.children[0] as THREE.Mesh).material instanceof
+            THREE.MeshStandardMaterial
+              ? (
+                  (o.children[0] as THREE.Mesh)
+                    .material as THREE.MeshStandardMaterial
+                ).color.getHex()
+              : null,
           position: o.position.toArray(),
         })),
         camera: camera.position.toArray(),

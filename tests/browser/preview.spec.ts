@@ -23,10 +23,10 @@ test("all 16 variants render with correct part counts", async ({ page }) => {
       s.height === "3U"
         ? s.style === "NY"
           ? 8
-          : 6
+          : 6 + 2 * s.width
         : s.style === "NY"
           ? 18
-          : 12;
+          : 12 + 6 * s.width;
     await expect(page.locator(".scene-message")).toHaveText(
       `${count}部品を表示中`,
     );
@@ -184,3 +184,43 @@ declare global {
     rail: ReturnType<typeof import("../../src/preview").mountRailPreview>;
   }
 }
+
+test("insert colors stay independent of body and nuts are instanced", async ({
+  page,
+}) => {
+  await page.goto("/tests/browser/fixture.html");
+  for (const s of selections) {
+    await page.evaluate((s) => window.rail.setSelection(s), s);
+    await expect(page.locator(".scene-message")).toHaveAttribute(
+      "data-state",
+      "ready",
+    );
+    const items = await page.evaluate(() => window.rail.snapshot()!.items);
+    const inserts = items.filter((x) =>
+      x.id.startsWith(s.style === "NY" ? "bar-" : "nuts-"),
+    );
+    expect(inserts).toHaveLength(s.height === "3U" ? 2 : 6);
+    for (const item of inserts) {
+      expect(item.color).toBe(s.style === "NY" ? 0x202124 : 0xc4c8cc);
+      expect(item.instances).toBe(s.style === "NU" ? s.width : 0);
+    }
+  }
+  await page.locator(".explode").fill("100");
+  await page.screenshot({
+    path: "docs/screenshots/nuts-exploded.png",
+    fullPage: true,
+  });
+  for (const view of ["side", "left"]) {
+    await page.locator(`[data-view=${view}]`).click();
+    await page.screenshot({
+      path: `docs/screenshots/panel-${view}.png`,
+      fullPage: true,
+    });
+  }
+  await page.locator("[data-layer=nut]").uncheck();
+  expect(
+    (await page.evaluate(() => window.rail.snapshot()!.items)).filter(
+      (x) => !x.visible,
+    ),
+  ).toHaveLength(6);
+});

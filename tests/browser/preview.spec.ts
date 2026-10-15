@@ -1,15 +1,15 @@
 import { test, expect } from "@playwright/test";
 import { selections, productId } from "../../src/assembly";
-test("all 16 variants render with correct part counts", async ({ page }) => {
-  const errors: string[] = [];
-  page.on("pageerror", (e) => errors.push(e.message));
-  page.on("console", (m) => {
-    if (m.type() === "error") errors.push(m.text());
-  });
-  const failures: string[] = [];
-  page.on("requestfailed", (r) => failures.push(r.url()));
-  await page.goto("/");
-  for (const s of selections) {
+for (const s of selections)
+  test(`${productId(s)} renders with correct part counts`, async ({ page }) => {
+    const errors: string[] = [];
+    page.on("pageerror", (e) => errors.push(e.message));
+    page.on("console", (m) => {
+      if (m.type() === "error") errors.push(m.text());
+    });
+    const failures: string[] = [];
+    page.on("requestfailed", (r) => failures.push(r.url()));
+    await page.goto("/");
     await page.locator("[name=height]").selectOption(s.height);
     await page.locator("[name=width]").selectOption(String(s.width));
     await page.locator(`[name=style][value=${s.style}]`).check();
@@ -39,10 +39,14 @@ test("all 16 variants render with correct part counts", async ({ page }) => {
         path: `docs/screenshots/${productId(s)}.png`,
         fullPage: true,
       });
-  }
-  expect(errors).toEqual([]);
-  expect(failures).toEqual([]);
-  await page.locator("[name=height]").selectOption("3U");
+    expect(errors).toEqual([]);
+    expect(failures).toEqual([]);
+  });
+test("exploded view and mobile controls", async ({ page }) => {
+  await page.goto("/");
+  await page.locator("[name=width]").selectOption("60");
+  await page.locator("[name=style][value=NU]").check();
+  await page.locator("[name=color][value=BK]").check();
   await expect(page.locator(".scene-message")).toHaveAttribute(
     "data-state",
     "ready",
